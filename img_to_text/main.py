@@ -69,7 +69,7 @@ async def handle_photo(message: Message):
         await bot.download_file(file.file_path, destination=file_path)
 
         # Выполняем OCR
-        language = "rus+eng"  # Укажите языки OCR
+        language = "rus"  # Укажите языки OCR
         text = ocr_image(file_path, language)
 
         # Отправляем результат пользователю
@@ -85,6 +85,7 @@ async def handle_photo(message: Message):
         # Удаляем файл после обработки
         if os.path.exists(file_path):
             os.remove(file_path)
+
 
 # Хэндлер для некорректных данных
 @dp.message()

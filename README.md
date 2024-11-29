@@ -11,4 +11,8 @@
 ## Развертываем aiogram
 
 1. poetry add aiogram python-dotenv
-2. 
+
+можно просто скачать с репы и установить через poetry
+
+poetry shell
+poetry install
