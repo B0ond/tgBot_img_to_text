@@ -14,5 +14,5 @@
 
 можно просто скачать с репы и установить через poetry
 
-poetry shell
+poetry shell\
 poetry install
