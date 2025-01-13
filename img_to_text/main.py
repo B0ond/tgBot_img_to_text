@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 # Загружаем переменные окружения
 load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
+LANG = os.getenv("LANG")
 
 # Проверка токена
 if not TOKEN:
@@ -69,7 +70,7 @@ async def handle_photo(message: Message):
         await bot.download_file(file.file_path, destination=file_path)
 
         # Выполняем OCR
-        language = "rus"  # Укажите языки OCR
+        language = LANG  # Укажите языки OCR  "rus+eng"
         text = ocr_image(file_path, language)
 
         # Отправляем результат пользователю
